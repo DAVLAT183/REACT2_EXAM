@@ -159,8 +159,7 @@ function Home({ wish, setWish }) {
             className="mySwiper w-[1250px]"
           >
             {
-              product?.products
-                .filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim()))
+              product?.products?.filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim()))
                 .map((e) => {
                   return (
                     <SwiperSlide key={e.id} className=' w-[380px] h-[250px]'>
@@ -288,7 +287,7 @@ function Home({ wish, setWish }) {
         >
           {
             product?.products
-              .filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim()))
+              ?.filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim()))
               .map((e) => {
                 return (
                   <SwiperSlide key={e.id} className=' w-[380px] h-[200px]'>
@@ -388,7 +387,7 @@ function Home({ wish, setWish }) {
       >
         {
           product?.products
-            .filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim()))
+           ?.filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim()))
             .map((e) => {
               return (
                 <SwiperSlide key={e.id} className=' w-[380px] h-[200px]'>
@@ -450,7 +449,7 @@ function Home({ wish, setWish }) {
       >
         {
           product?.products
-            .filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim())) 
+           ?.filter((e) => e.productName.toLowerCase().includes(search.toLowerCase().trim())) 
             .map((e) => {
               return (
                 <SwiperSlide key={e.id} className=' w-[380px] h-[250px]'>
