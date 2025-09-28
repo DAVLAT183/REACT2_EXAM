@@ -133,7 +133,7 @@ function Product({ wish, setWish }) {
                         .map((e) => (
                             <div key={e.id} className="w-[380px] h-[250px] relative">
                                 <img
-                                    src={`http://37.27.29.18:8002/images/${e.image}`}
+                                    src={`https://store-api.softclub.tj/images/${e.image}`}
                                     className="w-[220px] h-[200px] object-fit"
                                     alt={e.productName}
                                 />

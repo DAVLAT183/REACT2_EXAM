@@ -46,7 +46,7 @@ function CartPage() {
                             return (
                                 <tr key={e.id} className="border-b">
                                     <td className="flex items-center gap-3 py-3">
-                                        <img src={`http://37.27.29.18:8002/images/${e.product.image}`} className="w-12 h-12" alt="" />
+                                        <img src={`https://store-api.softclub.tj/images/${e.product.image}`} className="w-12 h-12" alt="" />
                                         <span>{e.product.productName}</span>
                                     </td>
                                     <td>${e.product.price}</td>

@@ -55,7 +55,7 @@ function Whishlis({ wish, setWish }) {
 
                                 <div className="flex justify-center mt-6 relative">
                                     <img
-                                        src={`http://37.27.29.18:8002/images/${el.image}`}
+                                        src={`https://store-api.softclub.tj/images/${el.image}`}
                                         alt={el.productName}
                                         className="w-[160px] h-[120px] mb-3 mt-[10px]"
                                         onError={(e) => {
@@ -128,7 +128,7 @@ function Whishlis({ wish, setWish }) {
                         .map((e) => {
                             return (
                                 <SwiperSlide key={e.id} className=' w-[380px] h-[200px]'>
-                                    <img src={`http://37.27.29.18:8002/images/${e.image}`} className='w-[270px] h-[200px] hover ' alt="" />
+                                    <img src={`https://store-api.softclub.tj/images/${e.image}`} className='w-[270px] h-[200px] hover ' alt="" />
                                     <div onClick={() => dispatch(Add(e.id))} className="w-[270px] bg-black text-white py-2 px-4 rounded-b-[3px] cursor-pointer transition duration-300 text-center flex items-center justify-center gap-[10px]">
                                         <ShoppingCart />
                                         <span>Add To Cart</span>

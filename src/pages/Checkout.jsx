@@ -59,7 +59,7 @@ function Checkout() {
                 <div className="space-y-3">
                     {productsInCart.map((e) => (
                         <div key={e.id} className="flex justify-between">
-                            <img src={`http://37.27.29.18:8002/images/${e.product.image}`} className="w-12 h-12" alt="" />
+                            <img src={`https://store-api.softclub.tj/images/${e.product.image}`} className="w-12 h-12" alt="" />
                             <span>{e.product.productName} x{e.quantity || 1}</span>
                             <span>${(e.product.price * (e.quantity || 1)).toFixed(2)}</span>
                         </div>
