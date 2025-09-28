@@ -22,7 +22,7 @@ import Footer from './Footer';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Autoplay, Pagination, Navigation, Scrollbar } from 'swiper/modules';
-
+import { BaseApi } from '../utils/token';
 
 import Apple from '../assets/1200px-Apple_gray_logo 1.png'
 import Vector from '../assets/Vector (1).png'
@@ -291,7 +291,7 @@ function Home({ wish, setWish }) {
               .map((e) => {
                 return (
                   <SwiperSlide key={e.id} className=' w-[380px] h-[200px]'>
-                    <img src={`http://37.27.29.18:8002/images/${e.image}`} className='w-[270px] h-[200px] hover ' alt="" />
+                    <img src={`https://store-api.softclub.tj/images/${e.image}`} className='w-[270px] h-[200px] hover ' alt="" />
                     <div onClick={() => dispatch(Add(e.id))} className="w-[270px] bg-black text-white py-2 px-4 rounded-b-[3px] cursor-pointer transition duration-300 text-center flex items-center justify-center gap-[10px]">
                       <ShoppingCart />
                       <span>Add To Cart</span>

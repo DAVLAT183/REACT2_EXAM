@@ -2,13 +2,18 @@ import React from 'react'
 import { BaseApi, SaveToken, GetToken, AxiosDavlat, } from '../utils/token';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'
+import fetchProducts from '../reduser/counterSlice'
 
 
 function Login() {
+    const { user } = useSelector((state) => state.counter)
+    const dispatch = useDispatch()
     async function Login(user) {
         try {
             const { data } = await AxiosDavlat.post(`${BaseApi}/Account/login`, user);
             SaveToken(data.data);
+            dispatch(fetchProducts())
         } catch (error) {
             console.error(error);
         }
